@@ -1,0 +1,240 @@
+INFO - 2023-10-02 10:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 10:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-02 10:58:59 --> mysqli_sql_exception: Unknown column '837ec5754f503cfaaee0929fd48974e7' in 'where clause' in C:\xampp8-1\htdocs\sipt\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-1\htdocs\sipt\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp8-1\htdocs\sipt\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp8-1\htdocs\sipt\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp8-1\htdocs\sipt\app\Controllers\RespondenController.php(17): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(934): App\Controllers\RespondenController->index()
+#5 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+#6 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1\htdocs\sipt\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1\htdocs\sipt\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htd...')
+#9 {main}
+CRITICAL - 2023-10-02 10:58:59 --> Unknown column '837ec5754f503cfaaee0929fd48974e7' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7')
+ 4 APPPATH\Controllers\RespondenController.php(17): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RespondenController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htdocs\\sipt\\public\\index.php')
+ERROR - 2023-10-02 10:59:32 --> mysqli_sql_exception: Unknown column '837ec5754f503cfaaee0929fd48974e7' in 'where clause' in C:\xampp8-1\htdocs\sipt\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-1\htdocs\sipt\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp8-1\htdocs\sipt\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp8-1\htdocs\sipt\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp8-1\htdocs\sipt\app\Controllers\RespondenController.php(17): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(934): App\Controllers\RespondenController->index()
+#5 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+#6 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1\htdocs\sipt\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1\htdocs\sipt\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htd...')
+#9 {main}
+CRITICAL - 2023-10-02 10:59:32 --> Unknown column '837ec5754f503cfaaee0929fd48974e7' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7')
+ 4 APPPATH\Controllers\RespondenController.php(17): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RespondenController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htdocs\\sipt\\public\\index.php')
+ERROR - 2023-10-02 11:00:28 --> mysqli_sql_exception: Unknown column '837ec5754f503cfaaee0929fd48974e7' in 'where clause' in C:\xampp8-1\htdocs\sipt\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-1\htdocs\sipt\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\xampp8-1\htdocs\sipt\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\xampp8-1\htdocs\sipt\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\xampp8-1\htdocs\sipt\app\Controllers\RespondenController.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...')
+#4 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(934): App\Controllers\RespondenController->index()
+#5 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+#6 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp8-1\htdocs\sipt\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp8-1\htdocs\sipt\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htd...')
+#9 {main}
+CRITICAL - 2023-10-02 11:00:28 --> Unknown column '837ec5754f503cfaaee0929fd48974e7' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7')
+ 4 APPPATH\Controllers\RespondenController.php(18): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbl_ip WHERE ip_address = 837ec5754f503cfaaee0929fd48974e7')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RespondenController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htdocs\\sipt\\public\\index.php')
+INFO - 2023-10-02 11:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-02 11:11:51 --> Call to a member function getResult() on bool
+in APPPATH\Controllers\RespondenController.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RespondenController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htdocs\\sipt\\public\\index.php')
+INFO - 2023-10-02 11:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 11:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-10-02 12:05:39 --> mysqli_sql_exception: Unknown column 'rating' in 'field list' in C:\xampp8-1\htdocs\sipt\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp8-1\htdocs\sipt\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp8-1\htdocs\sipt\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp8-1\htdocs\sipt\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp8-1\htdocs\sipt\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp8-1\htdocs\sipt\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp8-1\htdocs\sipt\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp8-1\htdocs\sipt\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp8-1\htdocs\sipt\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp8-1\htdocs\sipt\app\Controllers\RespondenController.php(83): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(934): App\Controllers\RespondenController->save('837ec5754f503cf...')
+#10 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+#11 C:\xampp8-1\htdocs\sipt\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp8-1\htdocs\sipt\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp8-1\htdocs\sipt\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htd...')
+#14 {main}
+CRITICAL - 2023-10-02 12:05:39 --> Unknown column 'rating' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `tbl_responden` (`tanggal`, `nama_responden`, `alamat`, `jenis_kelamin`, `umur`, `pertanyaan_1`, `pertanyaan_2`, `pertanyaan_3`, `pertanyaan_4`, `pertanyaan_5`, `pertanyaan_6`, `pertanyaan_7`, `pertanyaan_8`, `pertanyaan_9`, `pertanyaan_10`, `rating`) VALUES (\'2023-10-02\', \'Anto\', \'ajscljb\', \'L\', \'24\', \'kjbk\', \'jbklj\', \'bkl\', \'jbk\', \'jb\', \'kjb\', \'lkjb\', \'lkjb\', \'klj\', \'kj\', \'on\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_responden` (`tanggal`, `nama_responden`, `alamat`, `jenis_kelamin`, `umur`, `pertanyaan_1`, `pertanyaan_2`, `pertanyaan_3`, `pertanyaan_4`, `pertanyaan_5`, `pertanyaan_6`, `pertanyaan_7`, `pertanyaan_8`, `pertanyaan_9`, `pertanyaan_10`, `rating`) VALUES (\'2023-10-02\', \'Anto\', \'ajscljb\', \'L\', \'24\', \'kjbk\', \'jbklj\', \'bkl\', \'jbk\', \'jb\', \'kjb\', \'lkjb\', \'lkjb\', \'klj\', \'kj\', \'on\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_responden` (`tanggal`, `nama_responden`, `alamat`, `jenis_kelamin`, `umur`, `pertanyaan_1`, `pertanyaan_2`, `pertanyaan_3`, `pertanyaan_4`, `pertanyaan_5`, `pertanyaan_6`, `pertanyaan_7`, `pertanyaan_8`, `pertanyaan_9`, `pertanyaan_10`, `rating`) VALUES (\'2023-10-02\', \'Anto\', \'ajscljb\', \'L\', \'24\', \'kjbk\', \'jbklj\', \'bkl\', \'jbk\', \'jb\', \'kjb\', \'lkjb\', \'lkjb\', \'klj\', \'kj\', \'on\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_responden` (`tanggal`, `nama_responden`, `alamat`, `jenis_kelamin`, `umur`, `pertanyaan_1`, `pertanyaan_2`, `pertanyaan_3`, `pertanyaan_4`, `pertanyaan_5`, `pertanyaan_6`, `pertanyaan_7`, `pertanyaan_8`, `pertanyaan_9`, `pertanyaan_10`, `rating`) VALUES (:tanggal:, :nama_responden:, :alamat:, :jenis_kelamin:, :umur:, :pertanyaan_1:, :pertanyaan_2:, :pertanyaan_3:, :pertanyaan_4:, :pertanyaan_5:, :pertanyaan_6:, :pertanyaan_7:, :pertanyaan_8:, :pertanyaan_9:, :pertanyaan_10:, :rating:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\RespondenController.php(83): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RespondenController->save('837ec5754f503cfaaee0929fd48974e7')
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htdocs\\sipt\\public\\index.php')
+INFO - 2023-10-02 12:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:43:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:47:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 12:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:07:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 13:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-02 14:08:45 --> Array to string conversion
+in APPPATH\Views\responden\rasio.php on line 174.
+ 1 APPPATH\Views\responden\rasio.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp8-1\\htdocs\\sipt\\app\\Views\\responden\\rasio.php', 174)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp8-1\\htdocs\\sipt\\app\\Views\\responden\\rasio.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('responden/rasio', [], true)
+ 5 APPPATH\Controllers\RespondenController.php(114): view('responden/rasio', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RespondenController->rasio()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htdocs\\sipt\\public\\index.php')
+INFO - 2023-10-02 14:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:23:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:33:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:47:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 14:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:02:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:04:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:06:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-02 15:34:06 --> Undefined array key "rasio"
+in APPPATH\Controllers\RespondenController.php on line 114.
+ 1 APPPATH\Controllers\RespondenController.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "rasio"', 'C:\\xampp8-1\\htdocs\\sipt\\app\\Controllers\\RespondenController.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RespondenController->rasio()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htdocs\\sipt\\public\\index.php')
+CRITICAL - 2023-10-02 15:34:34 --> Undefined array key "rasio"
+in APPPATH\Controllers\RespondenController.php on line 115.
+ 1 APPPATH\Controllers\RespondenController.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "rasio"', 'C:\\xampp8-1\\htdocs\\sipt\\app\\Controllers\\RespondenController.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\RespondenController->rasio()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RespondenController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp8-1\\htdocs\\sipt\\public\\index.php')
+INFO - 2023-10-02 15:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-02 15:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
