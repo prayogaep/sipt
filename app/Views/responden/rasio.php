@@ -39,6 +39,21 @@
                 </div><!-- end card-body -->
             </div><!-- end card -->
         </div>
+        <div class="col-xl-8">
+            <div class="card">
+                <div class="card-header align-items-center d-flex">
+                    <h4 class="card-title mb-0 flex-grow-1">Penilaian Rasio</h4>
+                    <div class="flex-shrink-0">
+                        <!-- <a href="/produk/create" class="btn btn-primary">+ Tambah Produk</a> -->
+                    </div>
+                </div><!-- end card header -->
+
+                <div class="card-body">
+                    <h1><?= $penilaian; ?></h1>
+
+                </div><!-- end card-body -->
+            </div><!-- end card -->
+        </div>
         <!-- end col -->
 
 
@@ -72,7 +87,7 @@
 <script>
     // Data untuk chart bar
     const data = {
-        labels: ["⭐","⭐⭐", "⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐⭐⭐"],
+        labels: ["⭐ Sangat Tidak Puas","⭐⭐ Tidak Puas", "⭐⭐⭐ Biasa saja", "⭐⭐⭐⭐ Puas", "⭐⭐⭐⭐⭐ Sangat Puas"],
         datasets: [{
             label: "Total",
             data: <?= $count; ?>,

@@ -99,26 +99,8 @@ $to = $_GET ? $_GET['to'] : date('Y-m-d');
                                                     </div>
                                                     <div class="modal-body">
                                                         <ul>
-                                                            <li>Bagaimana kesan pertama anda saat mengunjungi toko kami ?</li>
-                                                            <p><?= $r['pertanyaan_1'] ?></p>
-                                                            <li>Bagaimana penilaian anda terhadap ketersediaan produk yang anda cari selama mengunjungi toko ?</li>
-                                                            <p><?= $r['pertanyaan_2'] ?></p>
-                                                            <li>Bagaimana penilaian anda terhadap keramahan dan kesopanan staf toko selama mengunjungi toko ?</li>
-                                                            <p><?= $r['pertanyaan_3'] ?></p>
-                                                            <li>Bagaimaan penilaian anda terhadap kecepatan efisiensi proses pembayaran di kasir ?</li>
-                                                            <p><?= $r['pertanyaan_4'] ?></p>
-                                                            <li>Sejauh mana anda puas dengan kualitas produk yang anda beli di toko ?</li>
-                                                            <p><?= $r['pertanyaan_5'] ?></p>
-                                                            <li>Apakah anda merasa bahwa staff toko memberikan informasi yang cukup tentang produk, harga dan promosi yang berlangsung ?</li>
-                                                            <p><?= $r['pertanyaan_6'] ?></p>
-                                                            <li>Apakah anda merasa kebersihan dan kerapihan toko memenuhi standar yang diharapkan ?</li>
-                                                            <p><?= $r['pertanyaan_7'] ?></p>
-                                                            <li>Apakah anda puas dengan responsivitas staf toko ketika anda membutuhkan bantuan atau informasi tambahan ?</li>
-                                                            <p><?= $r['pertanyaan_8'] ?></p>
-                                                            <li>Apakah anda puas dengan pengalaman berbelanja ?</li>
-                                                            <p><?= $r['pertanyaan_9'] ?></p>
-                                                            <li>Apakah anda merekomendasikan toko ini kepada teman atau keluarga berdasarkan pengalaman anda ?</li>
-                                                            <p><?= $r['pertanyaan_10'] ?></p>
+                                                            <li>Kritik dan Saran</li>
+                                                            <p><?= $r['ks'] ?></p>
                                                         </ul>
                                                     </div>
                                                     <div class="modal-footer">

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\m_ip;
 use App\Models\m_responden;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -10,15 +11,16 @@ class RespondenController extends BaseController
 {
     // protected $conn;
     protected $responden; // variable global yang bisa di akses oleh semua function
+    protected $ip; // variable global yang bisa di akses oleh semua function
     public function __construct()
     {
         $this->responden = new m_responden();
+        $this->ip = new m_ip();
     }
     public function index() // ini yang dituju oleh routes.php
     {
         $p = md5($this->request->getIPAddress());
-        $query = "SELECT * FROM tbl_ip WHERE ip_address = '$p'";
-        $cekIp = $this->runQuery($query)->getResult();
+        $cekIp = $this->responden->checkIpResponden($p);
         if (!empty($cekIp)) {
             return redirect()->to('/')->with('warning', 'Anda sudah mengisi kuisioner, Terima Kasih untuk feedbacknya'); // ini mengarahkan ke file routes.php dengan method get ke alamat /
         }
@@ -49,48 +51,17 @@ class RespondenController extends BaseController
             // umur yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
             'umur' => $this->request->getPost('umur'), // umur yang kanan menangkap nilai dari input yang name nya umur
 
-            // pertanyaan_1 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_1' => $this->request->getPost('pertanyaan_1'), // pertanyaan_1 yang kanan menangkap nilai dari input yang name nya pertanyaan_1
-
-            // pertanyaan_2 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_2' => $this->request->getPost('pertanyaan_2'), // pertanyaan_2 yang kanan menangkap nilai dari input yang name nya pertanyaan_2
-
-            // pertanyaan_3 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_3' => $this->request->getPost('pertanyaan_3'), // pertanyaan_3 yang kanan menangkap nilai dari input yang name nya pertanyaan_3
-
-            // pertanyaan_4 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_4' => $this->request->getPost('pertanyaan_4'), // pertanyaan_4 yang kanan menangkap nilai dari input yang name nya pertanyaan_4
-
-            // pertanyaan_5 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_5' => $this->request->getPost('pertanyaan_5'), // pertanyaan_5 yang kanan menangkap nilai dari input yang name nya pertanyaan_5
-
-            // pertanyaan_6 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_6' => $this->request->getPost('pertanyaan_6'), // pertanyaan_6 yang kanan menangkap nilai dari input yang name nya pertanyaan_6
-
-            // pertanyaan_7 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_7' => $this->request->getPost('pertanyaan_7'), // pertanyaan_7 yang kanan menangkap nilai dari input yang name nya pertanyaan_7
-
-            // pertanyaan_8 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_8' => $this->request->getPost('pertanyaan_8'), // pertanyaan_8 yang kanan menangkap nilai dari input yang name nya pertanyaan_8
-
-            // pertanyaan_9 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_9' => $this->request->getPost('pertanyaan_9'), // pertanyaan_9 yang kanan menangkap nilai dari input yang name nya pertanyaan_9
-
-            // pertanyaan_10 yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
-            'pertanyaan_10' => $this->request->getPost('pertanyaan_10'), // pertanyaan_10 yang kanan menangkap nilai dari input yang name nya pertanyaan_10
+            // ks yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
+            'ks' => $this->request->getPost('ks'), // ks yang kanan menangkap nilai dari input yang name nya ks
 
             // rating yang kiri adalah yang sesuai dengan kolom yang ada di tbl_user
             'rating' => $this->request->getPost('rating'), // rating yang kanan menangkap nilai dari input yang name nya rating
         ];
         $this->responden->save($data); // Proses simpan data ke m_responden
-        $this->runQuery("INSERT INTO tbl_ip (ip_address) VALUES ('$p')");
+        $this->ip->save(['ip_address' => $p]);
         return redirect()->to('/')->with('success', 'Terima kasih untuk feedback anda!, Jawaban dan Penilaian anda akan membantu peningkatan pelayanan kami'); // ini mengarahkan ke file routes.php dengan method get ke alamat /
     }
-    private function runQuery($query)
-    {
-        $conn = db_connect();
-        return $conn->query($query);
-    }
+    
     public function show()
     {
         if ($this->request->getGet('from')) {
@@ -109,7 +80,7 @@ class RespondenController extends BaseController
     }
     public function rasio()
     {
-        $responden = $this->runQuery("SELECT COUNT(rating) rate, rating FROM tbl_responden GROUP BY rating")->getResultArray();
+        $responden = $this->responden->runQuery("SELECT COUNT(rating) rate, rating FROM tbl_responden GROUP BY rating")->getResultArray();
 
         // Inisialisasi array untuk rating dari 1 hingga 5
         $ratings = [1, 2, 3, 4, 5];
@@ -129,42 +100,20 @@ class RespondenController extends BaseController
         $count = array_values($ratingCount);
         $rating = array_keys($ratingCount);
 
-        $rasio = $this->getRasio();
-
+        $rasio = $this->responden->getRasio();
+        $nilai = number_format(floatval($rasio['rasio']), 2, '.', '');
         $data = [
             'title' => 'Rasio Pelayanan',
             'count' => json_encode($count),
             'rating' => json_encode($rating),
-            'rasio' => number_format(floatval($rasio['rasio']), 2, '.', '')
+            'rasio' => $nilai,
+            'penilaian' => $this->responden->penilaianRasio($nilai)
         ];
 
         return view('responden/rasio', $data);
         // ini akan mengarahkan ke folder views->responden->index dengan membawa $data
     }
-    public function getRasio()
-    {
-        $rasio = $this->runQuery("SELECT (result/responden) rasio FROM ( SELECT
-                SUM(total) result, (SELECT COUNT(*) responden from tbl_responden) responden
-                FROM
-                    (
-                    SELECT
-                        (rate * rating) total
-                    FROM
-                        (
-                        SELECT
-                            COUNT(rating) rate,
-                            rating
-                        FROM
-                            tbl_responden
-                        GROUP BY
-                            Rating
-                    ) A
-                GROUP BY
-                    (rate * rating)
-                ) A ) A; 
-        ")->getRowArray();
-        return $rasio;
-    }
+    
     public function export()
     {
         if ($this->request->getGet('from')) {
@@ -179,34 +128,22 @@ class RespondenController extends BaseController
         // tulis header/nama kolom 
         $spreadsheet->setActiveSheetIndex(0)
             ->setCellValue('A1', 'Nama')
-            ->setCellValue('B1', 'Rating')
-            ->setCellValue('C1', 'Bagaimana kesan pertama anda saat mengunjungi toko kami ?')
-            ->setCellValue('D1', 'Bagaimana penilaian anda terhadap ketersediaan produk yang anda cari selama mengunjungi toko ?')
-            ->setCellValue('E1', 'Bagaimana penilaian anda terhadap keramahan dan kesopanan staf toko selama mengunjungi toko ?')
-            ->setCellValue('F1', 'Bagaimaan penilaian anda terhadap kecepatan efisiensi proses pembayaran di kasir ?')
-            ->setCellValue('G1', 'Sejauh mana anda puas dengan kualitas produk yang anda beli di toko ?')
-            ->setCellValue('H1', 'Apakah anda merasa bahwa staff toko memberikan informasi yang cukup tentang produk, harga dan promosi yang berlangsung ?')
-            ->setCellValue('I1', 'Apakah anda merasa kebersihan dan kerapihan toko memenuhi standar yang diharapkan ?')
-            ->setCellValue('J1', 'Apakah anda puas dengan responsivitas staf toko ketika anda membutuhkan bantuan atau informasi tambahan ?')
-            ->setCellValue('K1', 'Apakah anda puas dengan pengalaman berbelanja ?')
-            ->setCellValue('L1', 'Apakah anda merekomendasikan toko ini kepada teman atau keluarga berdasarkan pengalaman anda ?');
+            ->setCellValue('B1', 'Umur')
+            ->setCellValue('C1', 'Jenis kelamin')
+            ->setCellValue('D1', 'Alamat')
+            ->setCellValue('E1', 'Rating')
+            ->setCellValue('F1', 'Dari pengalaman Anda sebagai pelanggan di toko ini, bagaimana penilaian Anda terhadap kualitas keseluruhan pelayanan yang diberikan oleh toko  ?');
 
         $column = 2;
         // tulis data mobil ke cell
         foreach ($responden as $data) {
             $spreadsheet->setActiveSheetIndex(0)
                 ->setCellValue('A' . $column, $data['nama_responden'])
-                ->setCellValue('B' . $column, $data['rating'])
-                ->setCellValue('C' . $column, $data['pertanyaan_1'])
-                ->setCellValue('D' . $column, $data['pertanyaan_2'])
-                ->setCellValue('E' . $column, $data['pertanyaan_3'])
-                ->setCellValue('F' . $column, $data['pertanyaan_4'])
-                ->setCellValue('G' . $column, $data['pertanyaan_5'])
-                ->setCellValue('H' . $column, $data['pertanyaan_6'])
-                ->setCellValue('I' . $column, $data['pertanyaan_7'])
-                ->setCellValue('J' . $column, $data['pertanyaan_8'])
-                ->setCellValue('K' . $column, $data['pertanyaan_9'])
-                ->setCellValue('L' . $column, $data['pertanyaan_10']);
+                ->setCellValue('B' . $column, $data['umur'])
+                ->setCellValue('C' . $column, $data['jenis_kelamin'])
+                ->setCellValue('D' . $column, $data['alamat'])
+                ->setCellValue('E' . $column, $data['rating'])
+                ->setCellValue('F' . $column, $data['ks']);
             $column++;
         }
         // tulis dalam format .xlsx

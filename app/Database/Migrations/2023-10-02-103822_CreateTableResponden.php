@@ -32,34 +32,7 @@ class CreateTableResponden extends Migration
                 'type'           => 'INT',
                 'constraint'     => 11,
             ],
-            'pertanyaan_1' => [
-                'type'       => 'TEXT',
-            ],
-            'pertanyaan_2' => [
-                'type'       => 'TEXT',
-            ],
-            'pertanyaan_3' => [
-                'type'       => 'TEXT',
-            ],
-            'pertanyaan_4' => [
-                'type'       => 'TEXT',
-            ],
-            'pertanyaan_5' => [
-                'type'       => 'TEXT',
-            ],
-            'pertanyaan_6' => [
-                'type'       => 'TEXT',
-            ],
-            'pertanyaan_7' => [
-                'type'       => 'TEXT',
-            ],
-            'pertanyaan_8' => [
-                'type'       => 'TEXT',
-            ],
-            'pertanyaan_9' => [
-                'type'       => 'TEXT',
-            ],
-            'pertanyaan_10' => [
+            'ks' => [
                 'type'       => 'TEXT',
             ],
             'rating' => [
