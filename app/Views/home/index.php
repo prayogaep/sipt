@@ -106,45 +106,10 @@
                             <p class="lead text-muted lh-base">Sebuah perusahaan label musik independen yang berbasis di Bandung, Indonesia. Didirikan oleh TULUS bersama kakak kandungnya, Riri Muktamar pada tahun 2010. Saat ini TulusCompany memiliki dua divisi usaha utama yaitu TULUS Management (TULUS Man.) dan TULUS Production (TULUS Pro.).
 
                             </p>
-
-                            <!-- <div class="d-flex gap-2 justify-content-center mt-4">
-                                <a href="auth-signup-basic.html" class="btn btn-primary">Get Started <i class="ri-arrow-right-line align-middle ms-1"></i></a>
-                                <a href="pages-pricing.html" class="btn btn-danger">View Plans <i class="ri-eye-line align-middle ms-1"></i></a>
-                            </div> -->
                         </div>
 
                         <div class="mt-4 mt-sm-5 pt-sm-5 mb-sm-n5 demo-carousel">
-                            <!-- <div class="demo-img-patten-top d-none d-sm-block">
-                                <img src="assets/images/landing/img-pattern.png" class="d-block img-fluid" alt="...">
-                            </div>
-                            <div class="demo-img-patten-bottom d-none d-sm-block">
-                                <img src="assets/images/landing/img-pattern.png" class="d-block img-fluid" alt="...">
-                            </div>
-                            <div class="carousel slide carousel-fade" data-bs-ride="carousel">
-                                <div class="carousel-inner shadow-lg p-2 bg-white rounded">
-                                    <div class="carousel-item active" data-bs-interval="2000">
-                                        <img src="assets/images/demos/default.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="assets/images/demos/saas.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="assets/images/demos/material.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="assets/images/demos/minimal.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="assets/images/demos/creative.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="assets/images/demos/modern.png" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="assets/images/demos/interactive.png" class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
-                            </div> -->
+
                         </div>
                     </div>
                 </div>
@@ -180,35 +145,12 @@
                                             <div class="client-images">
                                                 <img src="<?= base_url(); ?>img/<?= $p['foto']; ?>" alt="client-img" class="mx-auto img-fluid d-block" height="250">
                                                 <p><?= $p['nama_produk']; ?></p>
+                                                <p class="badge bg-danger text-wrap" style="width: 6rem;"><?= $p['deskripsi']; ?></p>
                                             </div>
                                         </div>
                                     <?php } ?>
 
-                                    <!-- <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="<?= base_url(); ?>assets/images/clients/walmart.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="<?= base_url(); ?>assets/images/clients/lenovo.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="<?= base_url(); ?>assets/images/clients/paypal.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="<?= base_url(); ?>assets/images/clients/shopify.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-images">
-                                            <img src="<?= base_url(); ?>assets/images/clients/verizon.svg" alt="client-img" class="mx-auto img-fluid d-block">
-                                        </div>
-                                    </div> -->
+
                                 </div>
                             </div>
                         </div>
@@ -224,56 +166,6 @@
         <!-- Start footer -->
         <footer class="custom-footer bg-dark py-5 position-relative">
             <div class="container">
-                <!-- <div class="row">
-                    <div class="col-lg-4 mt-4">
-                        <div>
-                            <div>
-                            <img src="<?= base_url(); ?>assets/images/tulus-logo-2.png" class="card-logo card-logo-dark" alt="logo dark" height="30">
-                            </div>
-                            <div class="mt-4 fs-13">
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 ms-lg-auto">
-                        <div class="row">
-                            <div class="col-sm-4 mt-4">
-                                <h5 class="text-white mb-0">Company</h5>
-                                <div class="text-muted mt-3">
-                                    <ul class="list-unstyled ff-secondary footer-list">
-                                        <li><a href="pages-profile.html">About Us</a></li>
-                                        <li><a href="pages-gallery.html">Gallery</a></li>
-                                        <li><a href="apps-projects-overview.html">Projects</a></li>
-                                        <li><a href="pages-timeline.html">Timeline</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 mt-4">
-                                <h5 class="text-white mb-0">Apps Pages</h5>
-                                <div class="text-muted mt-3">
-                                    <ul class="list-unstyled ff-secondary footer-list">
-                                        <li><a href="pages-pricing.html">Calendar</a></li>
-                                        <li><a href="apps-mailbox.html">Mailbox</a></li>
-                                        <li><a href="apps-chat.html">Chat</a></li>
-                                        <li><a href="apps-crm-deals.html">Deals</a></li>
-                                        <li><a href="apps-tasks-kanban.html">Kanban Board</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 mt-4">
-                                <h5 class="text-white mb-0">Support</h5>
-                                <div class="text-muted mt-3">
-                                    <ul class="list-unstyled ff-secondary footer-list">
-                                        <li><a href="pages-faqs.html">FAQ</a></li>
-                                        <li><a href="pages-faqs.html">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div> -->
 
                 <div class="row text-center text-sm-start align-items-center mt-5">
                     <div class="col-sm-6">
